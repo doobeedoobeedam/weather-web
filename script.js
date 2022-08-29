@@ -2,7 +2,8 @@ const form   = document.querySelector('#form');
 const main   = document.querySelector('#main');
 const search = document.querySelector('#search');
 
-const url = (city) => `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7cb278732edfc758fdd591191de686d0`;
+const appID  = "api key";
+const url    = (city) => `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${appID}`;
 
 async function getWeatherByLocation(city) {
     const resp   = await fetch(url(city), { origin: 'cors' });
